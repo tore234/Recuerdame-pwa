@@ -1,5 +1,6 @@
 import { useBirthdays } from '../context/BirthdaysContext'
 import { useNotifications } from '../hooks/useNotifications'
+import { useEmailReminders } from '../hooks/useEmailReminders'
 import BirthdayCard from '../components/BirthdayCard'
 import EmptyState from '../components/EmptyState'
 import { isBirthdaySoon } from '../utils/dateUtils'
@@ -26,6 +27,7 @@ function SectionTitle({ label, color = '#E91E63', colorB = '#00BCD4' }) {
 export default function Dashboard() {
   const { birthdays, loading, settings } = useBirthdays()
   useNotifications(birthdays, settings)
+  useEmailReminders(birthdays, settings)
 
   if (loading) {
     return (

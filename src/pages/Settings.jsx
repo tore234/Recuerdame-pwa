@@ -4,6 +4,12 @@ import { toast } from 'sonner'
 import { useBirthdays } from '../context/BirthdaysContext'
 import { isFirebaseConfigured } from '../firebase/config'
 
+const isEmailJSConfigured = Boolean(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID &&
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID &&
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+)
+
 const ALERT_OPTIONS = [
   { value: 0,  label: 'El mismo día'   },
   { value: 1,  label: '1 día antes'    },
@@ -170,9 +176,22 @@ export default function Settings() {
             className="input-80 mt-3"
           />
         )}
-        <p className="font-mono text-xs text-dark80/30 mt-2 italic">
-          Requiere Firebase Extension Trigger Email + SendGrid.
-        </p>
+        {form.emailEnabled && !isEmailJSConfigured && (
+          <div
+            className="mt-3 border-2 p-3 flex gap-2"
+            style={{ borderColor: '#FFD740', background: '#FFF9C4', boxShadow: '2px 2px 0 #E65100' }}
+          >
+            <Info size={14} className="flex-shrink-0 mt-0.5" style={{ color: '#E65100' }} />
+            <p className="font-mono text-xs text-dark80/80 leading-relaxed">
+              Configura las variables <code>VITE_EMAILJS_*</code> en tu archivo <code>.env</code> para activar los envíos.
+            </p>
+          </div>
+        )}
+        {form.emailEnabled && isEmailJSConfigured && (
+          <p className="font-mono text-xs mt-3" style={{ color: '#2E7D32' }}>
+            ★ EmailJS conectado — los correos se enviarán al abrir la app.
+          </p>
+        )}
       </PanelBlock>
 
       {/* WhatsApp */}
