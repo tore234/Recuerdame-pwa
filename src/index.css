@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FFF5E6;
+    color: #1A0A2E;
+    font-family: 'Raleway', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+      linear-gradient(rgba(26,10,46,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,10,46,0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+
+  /* ── Cards ─────────────────────────────────────────────────────── */
+  .card-80 {
+    @apply bg-white border-2 border-dark80;
+    box-shadow: 4px 4px 0 #1A0A2E;
+    transition: box-shadow 0.1s, transform 0.1s;
+  }
+  .card-80:hover {
+    box-shadow: 6px 6px 0 #1A0A2E;
+    transform: translate(-1px, -1px);
+  }
+  .card-80-pink {
+    @apply bg-white border-2 border-pink80-dark;
+    box-shadow: 4px 4px 0 #880E4F;
+  }
+  .card-80-cyan {
+    @apply bg-white border-2 border-cyan80-dark;
+    box-shadow: 4px 4px 0 #006064;
+  }
+
+  /* ── Buttons ────────────────────────────────────────────────────── */
+  .btn-80 {
+    @apply inline-flex items-center justify-center gap-2
+           bg-pink80 text-white
+           px-5 py-3
+           font-sans font-bold text-sm uppercase tracking-widest
+           border-2 border-pink80-deeper
+           focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed
+           select-none cursor-pointer;
+    box-shadow: 3px 3px 0 #880E4F;
+    transition: box-shadow 0.1s, transform 0.1s;
+  }
+  .btn-80:hover:not(:disabled) {
+    box-shadow: 5px 5px 0 #880E4F;
+    transform: translate(-1px, -1px);
+  }
+  .btn-80:active:not(:disabled) {
+    box-shadow: 1px 1px 0 #880E4F;
+    transform: translate(2px, 2px);
+  }
+
+  .btn-80-outline {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-pink80-dark
+           px-5 py-3
+           font-sans font-bold text-sm uppercase tracking-widest
+           border-2 border-pink80-dark
+           focus:outline-none disabled:opacity-50
+           select-none cursor-pointer;
+    box-shadow: 3px 3px 0 #C2185B;
+    transition: box-shadow 0.1s, transform 0.1s;
+  }
+  .btn-80-outline:hover:not(:disabled) {
+    box-shadow: 5px 5px 0 #C2185B;
+    transform: translate(-1px, -1px);
+  }
+  .btn-80-outline:active:not(:disabled) {
+    box-shadow: 1px 1px 0 #C2185B;
+    transform: translate(2px, 2px);
+  }
+
+  .btn-80-cyan {
+    @apply inline-flex items-center justify-center gap-2
+           bg-cyan80 text-dark80
+           px-5 py-3
+           font-sans font-bold text-sm uppercase tracking-widest
+           border-2 border-cyan80-deeper
+           focus:outline-none disabled:opacity-50
+           select-none cursor-pointer;
+    box-shadow: 3px 3px 0 #006064;
+    transition: box-shadow 0.1s, transform 0.1s;
+  }
+  .btn-80-cyan:hover:not(:disabled) {
+    box-shadow: 5px 5px 0 #006064;
+    transform: translate(-1px, -1px);
+  }
+  .btn-80-cyan:active:not(:disabled) {
+    box-shadow: 1px 1px 0 #006064;
+    transform: translate(2px, 2px);
+  }
+
+  /* ── Inputs ─────────────────────────────────────────────────────── */
+  .input-80 {
+    @apply w-full bg-paper border-2 border-dark80 px-3 py-2.5
+           font-sans text-dark80 placeholder-dark80/40
+           focus:outline-none focus:border-pink80
+           transition-colors duration-150;
+  }
+
+  .label-80 {
+    @apply block font-mono text-xs font-bold text-dark80/70 mb-1.5 uppercase tracking-widest;
+  }
+
+  /* ── Section header ─────────────────────────────────────────────── */
+  .section-title {
+    @apply flex items-center gap-3 mb-4;
+  }
+  .section-title-bars {
+    @apply flex gap-1 items-stretch;
+  }
+
+  /* ── Divider ────────────────────────────────────────────────────── */
+  .divider-80 {
+    @apply h-1 w-full;
+    background: linear-gradient(90deg, #E91E63 0%, #FFD740 33%, #00BCD4 66%, #1A0A2E 100%);
+  }
+}
+
+/* ── Geometric decorations (pure CSS) ───────────────────────────────────── */
+.diamond::before {
+  content: '◆';
+  display: inline-block;
+}
+.star-deco::before {
+  content: '★';
+  display: inline-block;
+}

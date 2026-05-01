@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <!-- BG dark purple -->
+  <rect width="192" height="192" fill="#1A0A2E"/>
+
+  <!-- Geometric corner triangles -->
+  <polygon points="0,0 52,0 0,52"   fill="#E91E63"/>
+  <polygon points="192,0 140,0 192,52"  fill="#00BCD4"/>
+  <polygon points="0,192 52,192 0,140"  fill="#00BCD4"/>
+  <polygon points="192,192 140,192 192,140" fill="#E91E63"/>
+
+  <!-- Stars decorativas -->
+  <polygon points="24,78 26.8,86.5 35.7,86.5 28.5,91.7 31.3,100.2 24,95 16.7,100.2 19.5,91.7 12.3,86.5 21.2,86.5" fill="#FFD740"/>
+  <polygon points="168,78 170.8,86.5 179.7,86.5 172.5,91.7 175.3,100.2 168,95 160.7,100.2 163.5,91.7 156.3,86.5 165.2,86.5" fill="#FFD740"/>
+
+  <!-- Cake base (big layer) - hot pink -->
+  <rect x="22" y="118" width="148" height="46" fill="#E91E63" stroke="#1A0A2E" stroke-width="3"/>
+
+  <!-- Cake middle - cyan -->
+  <rect x="36" y="95" width="120" height="27" fill="#00BCD4" stroke="#1A0A2E" stroke-width="3"/>
+
+  <!-- Cake top - gold -->
+  <rect x="54" y="75" width="84" height="24" fill="#FFD740" stroke="#1A0A2E" stroke-width="3"/>
+
+  <!-- Candles (white rectangles) -->
+  <rect x="68"  y="54" width="7" height="24" fill="#FFFFFF" stroke="#1A0A2E" stroke-width="2"/>
+  <rect x="92"  y="48" width="7" height="30" fill="#FFFFFF" stroke="#1A0A2E" stroke-width="2"/>
+  <rect x="116" y="54" width="7" height="24" fill="#FFFFFF" stroke="#1A0A2E" stroke-width="2"/>
+
+  <!-- Flames (diamonds / geometric) -->
+  <polygon points="71.5,50 75,43 78.5,50 75,54" fill="#FFD740" stroke="#1A0A2E" stroke-width="1.5"/>
+  <polygon points="95.5,44 99,37 102.5,44 99,48" fill="#FFD740" stroke="#1A0A2E" stroke-width="1.5"/>
+  <polygon points="119.5,50 123,43 126.5,50 123,54" fill="#FFD740" stroke="#1A0A2E" stroke-width="1.5"/>
+
+  <!-- Dots decorativos en la base -->
+  <circle cx="50"  cy="141" r="7" fill="#FFD740"  stroke="#1A0A2E" stroke-width="2"/>
+  <circle cx="78"  cy="141" r="7" fill="#FFFFFF"  stroke="#1A0A2E" stroke-width="2"/>
+  <circle cx="106" cy="141" r="7" fill="#00BCD4"  stroke="#1A0A2E" stroke-width="2"/>
+  <circle cx="134" cy="141" r="7" fill="#FFFFFF"  stroke="#1A0A2E" stroke-width="2"/>
+  <circle cx="162" cy="141" r="7" fill="#FFD740"  stroke="#1A0A2E" stroke-width="2"/>
+
+  <!-- Diamonds pequeños en capa cyan -->
+  <polygon points="56,108.5 61,103 66,108.5 61,114"  fill="#1A0A2E"/>
+  <polygon points="88,108.5 93,103 98,108.5 93,114"  fill="#1A0A2E"/>
+  <polygon points="120,108.5 125,103 130,108.5 125,114" fill="#1A0A2E"/>
+
+  <!-- Rayas laterales en base -->
+  <rect x="22" y="118" width="148" height="7" fill="#C2185B" opacity="0.5"/>
+</svg>
